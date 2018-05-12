@@ -7,7 +7,6 @@ let Enemy = function(x, y, speed) {
   // The image/sprite for our enemies, this uses
   // a helper we've provided to easily load images
 
-
   this.x = x;
   this.y = y;
   this.speed = speed;
@@ -58,7 +57,20 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function(keyPress) {
-
+  switch (keyPress) {
+      case 'left':
+          this.x -= 100;
+          break;
+      case 'right':
+          this.x += 100;
+          break;
+      case 'up':
+          this.y -= 80;
+          break;
+      case 'down':
+          this.y += 80;
+          break;
+  }
 };
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
