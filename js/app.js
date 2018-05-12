@@ -48,8 +48,24 @@ let Player = function(x, y, speed) {
   this.sprite = 'images/char-boy.png';
 };
 
-Player.prototype.update = function(dt) {
+// Prevent player to move outside the canvas
 
+Player.prototype.update = function(dt) {
+  if (this.y > 380) {
+      this.y = 380;
+  }
+
+  if (this.x > 400) {
+      this.x = 400;
+  }
+
+  if (this.y < -30) {
+      this.y = -30;
+  }
+
+  if (this.x < 0) {
+      this.x = 0;
+  }
 };
 
 Player.prototype.render = function() {
@@ -65,10 +81,10 @@ Player.prototype.handleInput = function(keyPress) {
           this.x += 100;
           break;
       case 'up':
-          this.y -= 80;
+          this.y -= 82;
           break;
       case 'down':
-          this.y += 80;
+          this.y += 82;
           break;
   }
 };
