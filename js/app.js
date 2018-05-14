@@ -77,6 +77,13 @@ Player.prototype.update = function() {
   if (this.x < 0) {
       this.x = 0;
   }
+
+// Check for win
+
+  if (this.y < 0) {
+    this.x = 200;
+    this.y = 380;
+  }
 };
 
 Player.prototype.render = function() {
@@ -103,11 +110,12 @@ Player.prototype.handleInput = function(keyPress) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-let allEnemies = [];
-let enemy = new Enemy(0, 60, 220);
+let allEnemies = [
+  new Enemy(0, 60, 220),
+  new Enemy(0, 145, 200),
+  new Enemy(0, 230, 240)
+];
 let player = new Player(200, 380, 50);
-
-allEnemies.push(enemy);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
