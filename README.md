@@ -30,3 +30,7 @@ It's the easiest game in the world:
 ### Starter code:
 
 -   <https://github.com/udacity/frontend-nanodegree-arcade-game>
+
+### Collision detection:
+
+-   <https://stackoverflow.com/questions/2440377/javascript-collision-detection>
