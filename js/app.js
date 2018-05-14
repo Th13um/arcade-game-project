@@ -28,6 +28,17 @@ Enemy.prototype.update = function(dt) {
     this.x = -50;
     this.speed = 100 + Math.floor(Math.random() * 300);
   }
+
+  // Check collision
+
+  if (((player.y + 75) > this.y) &&
+      (player.y < (this.y + 67)) &&
+        ((player.x + 40) >  this.x) &&
+        (player.x < (this.x + 70))
+      ) {
+        player.x = 200;
+        player.y = 380;
+      }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -50,7 +61,7 @@ let Player = function(x, y, speed) {
 
 // Prevent player to move outside the canvas
 
-Player.prototype.update = function(dt) {
+Player.prototype.update = function() {
   if (this.y > 380) {
       this.y = 380;
   }
