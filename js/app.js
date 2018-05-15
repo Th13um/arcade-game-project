@@ -32,13 +32,13 @@ Enemy.prototype.update = function(dt) {
   // Check collision
 
   if (((player.y + 75) > this.y) &&
-      (player.y < (this.y + 67)) &&
-        ((player.x + 40) >  this.x) &&
-        (player.x < (this.x + 70))
-      ) {
-        player.x = 200;
-        player.y = 380;
-      }
+    (player.y < (this.y + 67)) &&
+    ((player.x + 40) > this.x) &&
+    (player.x < (this.x + 70))
+  ) {
+    player.x = 200;
+    player.y = 380;
+  }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -50,6 +50,7 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+
 // Re-use of the Enemy function
 
 let Player = function(x, y, speed) {
@@ -63,47 +64,53 @@ let Player = function(x, y, speed) {
 
 Player.prototype.update = function() {
   if (this.y > 380) {
-      this.y = 380;
+    this.y = 380;
   }
 
   if (this.x > 400) {
-      this.x = 400;
+    this.x = 400;
   }
 
   if (this.y < -30) {
-      this.y = -30;
+    this.y = -30;
   }
 
   if (this.x < 0) {
-      this.x = 0;
+    this.x = 0;
   }
 
-// Check for win
+  // Check for win
 
   if (this.y < 0) {
-    this.x = 200;
-    this.y = 380;
+    setTimeout(function() {
+      player.x = 200;
+      player.y = 380;
+    }, 300);
   }
 };
+
+// Draw the player on the screen,
 
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// Keyboard movement for player
+
 Player.prototype.handleInput = function(keyPress) {
   switch (keyPress) {
-      case 'left':
-          this.x -= 100;
-          break;
-      case 'right':
-          this.x += 100;
-          break;
-      case 'up':
-          this.y -= 82;
-          break;
-      case 'down':
-          this.y += 82;
-          break;
+    case 'left':
+      this.x -= 100;
+      break;
+    case 'right':
+      this.x += 100;
+      break;
+    case 'up':
+      this.y -= 82;
+      break;
+    case 'down':
+      this.y += 82;
+      break;
   }
 };
 // Now instantiate your objects.

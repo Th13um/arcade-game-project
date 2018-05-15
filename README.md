@@ -20,7 +20,7 @@ It's the easiest game in the world:
 
 -   You have your character in the bottom of the page.
 -   You can move with the arrow keys across the game board.
--   The goal is to reach the river a the top of the board without be touch by the monsters.
+-   The goal is to reach the river at the top of the board without be touch by any monsters.
 -   If you're touch by a monster, the game restart.
 -   If you reach the river, You win and the game restart.
 -   Please, enjoy.
@@ -34,3 +34,8 @@ It's the easiest game in the world:
 ### Collision detection:
 
 -   <https://stackoverflow.com/questions/2440377/javascript-collision-detection>
+
+### SetTimeout:
+
+-   <https://stackoverflow.com/questions/1183872/put-a-delay-in-javascript>
+-   <https://www.w3schools.com/jsref/met_win_settimeout.asp>
