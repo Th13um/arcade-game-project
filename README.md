@@ -29,13 +29,13 @@ It's the easiest game in the world:
 
 ### Starter code:
 
--   <https://github.com/udacity/frontend-nanodegree-arcade-game>
+-   https://github.com/udacity/frontend-nanodegree-arcade-game
 
 ### Collision detection:
 
--   <https://stackoverflow.com/questions/2440377/javascript-collision-detection>
+-   https://stackoverflow.com/questions/2440377/javascript-collision-detection
 
 ### SetTimeout:
 
--   <https://stackoverflow.com/questions/1183872/put-a-delay-in-javascript>
--   <https://www.w3schools.com/jsref/met_win_settimeout.asp>
+-   https://stackoverflow.com/questions/1183872/put-a-delay-in-javascript
+-   https://www.w3schools.com/jsref/met_win_settimeout.asp
