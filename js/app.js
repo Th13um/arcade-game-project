@@ -86,6 +86,7 @@ Player.prototype.update = function() {
       player.x = 200;
       player.y = 380;
     }, 300);
+    victoryAlert();
   }
 };
 
@@ -95,6 +96,15 @@ Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// Victory alert
+ 
+function victoryAlert() {
+  sweetAlert({
+    title: 'Good job!',
+    text: 'You crossed the roach road ! ',
+    icon: 'success',
+  })
+}
 // Keyboard movement for player
 
 Player.prototype.handleInput = function(keyPress) {
